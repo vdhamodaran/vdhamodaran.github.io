@@ -13,6 +13,90 @@
  
 <script type="text/javascript" src="//use.typekit.net/fya5ecf.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    jQuery('.skillbar').each(function(){
+        jQuery(this).find('.skillbar-bar').animate({
+            width:jQuery(this).attr('data-percent')
+        },6000);
+    });
+});
+</script>
+<style>
+.skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:15px;
+    width:100%;
+    background:#eee;
+    height:35px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+}
+
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    font-weight:bold;
+    font-size:13px;
+    color:#fff;
+    background:#6adcfa;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+    display:block;
+    background:rgba(0, 0, 0, 0.1);
+    padding:0 20px;
+    height:35px;
+    line-height:35px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+    height:35px;
+    width:0px;
+    background:#6adcfa;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:11px;
+    height:35px;
+    line-height:35px;
+    color:#444;
+    color:rgba(0, 0, 0, 0.4);
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -51,28 +135,63 @@ Web and Mobile Application Developer
 </header>
 <main class="content">
 <div class="container">
-<header class="intro  intro--rules">
-<h1>Get in touch</h1>
-</header>
 <section>
 <h3>About me!</h3>
 <hr class="intro--rule">
-<p> I am tech freak, futurist and I keep myself occupied all the time with some work. My passion and interest is for Computers and Cars without which I cannot survive. I dream big and always think big, I believe that there is no limits for possibilities. I work as a Book Nerd in campus. In my spare time, I play games, watch podcasts from tech reviewers in youtube and read feeds in feedly!.</p></section>
-<section class="posts  section--pad">
-        <h3>What Can I Do??</h3>
+<p> I am tech freak, futurist and I keep myself occupied all the time with some work. My passion and interest is for Computers and Cars without which I cannot survive. I dream big and always think big, I believe that there is no limits for possibilities. I work as a Book Nerd in campus. In my spare time, I play games, watch podcasts from tech reviewers in youtube and read feeds in feedly!.</p>      <h3>Skill Set</h3>
+<hr class="intro--rule">
+<div style="width:85%; padding:20px;">
+
+<div class="skillbar clearfix " data-percent="90%">
+    <div class="skillbar-title" style="background: #5A5B5C;"><span>Java</span></div>
+    <div class="skillbar-bar" style="background: #5A5B5C;"></div>
+    <div class="skill-bar-percent">Proficient</div>
+</div>
+
+<div class="skillbar clearfix " data-percent="65%">
+    <div class="skillbar-title" style="background: #5A5B5C;"><span>Android</span></div>
+    <div class="skillbar-bar" style="background: #5A5B5C;"></div>
+    <div class="skill-bar-percent">Intermediate</div>
+</div>
+
+<div class="skillbar clearfix " data-percent="65%">
+    <div class="skillbar-title" style="background: #5A5B5C;"><span>Javascript & CSS</span></div>
+    <div class="skillbar-bar" style="background: #5A5B5C;"></div>
+    <div class="skill-bar-percent">Intermediate</div>
+</div>
+
+<div class="skillbar clearfix " data-percent="90%">
+    <div class="skillbar-title" style="background: #5A5B5C;"><span>Php</span></div>
+    <div class="skillbar-bar" style="background: #5A5B5C;"></div>
+    <div class="skill-bar-percent">Proficient</div>
+</div>
+
+<div class="skillbar clearfix " data-percent="45%">
+    <div class="skillbar-title" style="background: #5A5B5C;"><span>JQuery & AngularJS</span></div>
+    <div class="skillbar-bar" style="background: #5A5B5C;"></div>
+    <div class="skill-bar-percent">Beginner</div>
+</div>
+
+<div class="skillbar clearfix " data-percent="65%">
+    <div class="skillbar-title" style="background: #5A5B5C;"><span>MySQL</span></div>
+    <div class="skillbar-bar" style="background: #5A5B5C;"></div>
+    <div class="skill-bar-percent">Intermediate</div>
+</div>
+</div>
+<br/>
+  <h3>What Can I Do??</h3>
         <hr class="intro--rule">
         <p>When you come to me with an Sparkling idea, I can get it conceptualized and design a model so we start developing it, then we test it so we get it launched, this is the work model I follow for my Projects when I come with an Sparkling idea!.</p> 
         <p>I can design, develop and deploy Web, Mobile and Java applications.</p>
-        <h3>What did I Previously??</h3> 
+        <h3>What did I do Previously??</h3> 
         <hr class="intro--rule">
         <p>I headed the programming club during my senior year in undergraduate and conducted intercollege programming competitions and also helped integrating Mooshak - a tool for evaluating code and ranking accordingly based on score.</p>
         <p>Developed an Augmented Reality Based Human Profiler as a part of Internship in HappiestMinds Technologies. The application can profile humans by detecting their face recognizing their gender and estimate the distance between them and the camera also it can generate various charts as analytical reports.</p>             
 </section>
-
 <section>
 <h3>Contact me!</h3>
 <hr class="intro--rule">
-I  <a href="https://twitter.com/VDhamodaran">tweet</a> about things of interest, I post and like posts on <a href="https://facebook.com/vigneshdhamodaran">facebook</a>.I also connect with people on  <a href="https://www.linkedin.com/in/vigneshdhamodaran">LinkedIN</a>. You can see my projects I worked on in <a href="https://www.github.com/vignesh24">Github</a> and you can <a href="mailto:vignesh.dams@gmail.com">email</a> me too.
+I  <a href="https://twitter.com/VDhamodaran">tweet</a> about things of interest, I post and like posts on <a href="https://facebook.com/vigneshdhamodaran">facebook</a>.I also connect with people on  <a href="https://www.linkedin.com/in/vigneshdhamodaran">LinkedIN</a>. You can see my projects I worked on in <a href="https://www.github.com/vignesh24">Github</a> and you can <a href="mailto:vignesh.dams@gmail.com">email</a> me too!. Grab a copy of my resume <a href="http://vignesh24.github.io/Vignesh%20Dhamodaran%20Resume.pdf">here!</a>
 
 <div class="callout text--center">I'm available for freelance projects.
 <a href="mailto:vignesh.dams@gmail.com" target="_blank">Get in touch!</a>
